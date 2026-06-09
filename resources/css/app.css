@@ -30,8 +30,8 @@
 
 @layer theme {
     .dark {
-        --color-accent: var(--color-white);
-        --color-accent-content: var(--color-white);
+        --color-accent: var(--color-blue-200);
+        --color-accent-content: var(--color-blue-300);
         --color-accent-foreground: var(--color-neutral-800);
     }
 }
@@ -47,7 +47,7 @@
     }
 
     tr {
-        @apply border-t even:bg-indigo-50;
+        @apply border-t even:bg-indigo-50 dark:even:bg-indigo-900 dark:text-blue-100;
     }
 
     th {
@@ -61,7 +61,7 @@
 
 @layer components {
     .lnk {
-        @apply border border-teal-200 rounded shadow px-3 py-2 min-h-7 w-40 hover:bg-teal-50;
+        @apply border border-teal-200 rounded shadow px-3 py-2 min-h-7 w-40 hover:bg-teal-50 dark:text-accent dark:hover:bg-zinc-600;
     }
 }
 

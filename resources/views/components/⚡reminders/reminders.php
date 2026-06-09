@@ -50,7 +50,7 @@ new class extends Component
     public function getRowClass($dueDate): string
     {
         if (!$dueDate){
-            return 'text-zinc-900';
+            return 'text-zinc-900 dark:text-accent';
         }
         $due = new Carbon($dueDate, 'America/Mexico_City');
         $today = Carbon::today('America/Mexico_City');
@@ -60,9 +60,9 @@ new class extends Component
         }
 
         if ($due->lessThan($today)) {
-            return 'text-red-600 bg-red-50';
+            return 'text-red-600 bg-red-50 dark:bg-red-200';
         }
 
-        return 'text-zinc-900';
+        return 'text-zinc-900 dark:text-accent';
     }
 };

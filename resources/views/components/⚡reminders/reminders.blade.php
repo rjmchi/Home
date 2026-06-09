@@ -1,7 +1,7 @@
 <div class=" border bg-teal-50">
 
-    <table class="min-w-full text-sm">
-        <tbody class="divide-y divide-gray-200">
+    <table class="min-w-full text-sm dark:bg-indigo-950">
+        <tbody class="divide-y divide-gray-200 ">
             @foreach ($reminders as $reminder)
                 <tr class="{{ $this->getRowClass($reminder->due_date) }} " wire:key='{{ $reminder->id }}'>
                     <td class="font-mono whitespace-nowrap">
@@ -18,11 +18,11 @@
             @endforeach
         </tbody>
     </table>
-    <form>
+    <form class="dark:bg-indigo-700">
         <div class="flex gap-1">
             <flux:input wire:model='due_date' />
             <flux:input wire:model='message' />
-            <flux:button wire:click='addReminder'>Add</flux:button>
+            <flux:button variant="primary" wire:click='addReminder'>Add</flux:button>
 
         </div>
     </form>
